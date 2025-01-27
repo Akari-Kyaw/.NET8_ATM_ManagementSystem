@@ -21,8 +21,12 @@ namespace Repository.UnitOfWork
             _dataContext = dataContext;
             AppSetting = appsetting.Value;
             Users = new UserRespository(dataContext);
+            Files=new FileRepository(dataContext);
+            Transactions = new TransactionRepository(dataContext);
         }
-        public IUserRespository Users { get; set; }
+        public IUserRepository Users { get; set; }
+        public IFileRepository Files { get; set; }
+        public ITransactionRepository Transactions { get; set; }
         public AppSetting AppSetting { get; set; }
         public void Dispose()
         {

@@ -6,11 +6,18 @@ using System.Threading.Tasks;
 
 namespace Model.DTO
 {
+    public class UserLoginDTO
+    {
+        public string Name { get; set; }
+        public string Password { get; set; }
+    }
     public class AddUserDTO
     {
         public string Name {  get; set; }   
         public string Password { get; set; }
         public decimal Amount { get; set; }
+        public bool? IsAdmin { get; set; }
+
         public string Created_by {  get; set; }
 
     }

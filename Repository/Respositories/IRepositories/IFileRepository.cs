@@ -7,7 +7,7 @@ using Model.Entities;
 
 namespace Repository.Respositories.IRepositories
 {
-    public interface IUserRepository:IGenericRepository<User>
+    public interface IFileRepository : IGenericRepository<Files>
     {
     }
 }

@@ -9,7 +9,11 @@ namespace Repository.UnitOfWork
 {
     public interface IUnitOfWork:IDisposable
         {
-        IUserRespository Users { get; }
+        IUserRepository Users { get; }
+        IFileRepository Files { get; }
+        ITransactionRepository Transactions { get; }
+
+
         Task<int> SaveChangesAsync();
 
     }

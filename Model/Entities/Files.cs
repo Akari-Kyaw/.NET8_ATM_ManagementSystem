@@ -9,16 +9,14 @@ using Model.ApplicationConfig;
 
 namespace Model.Entities
 {
-    [Table("User")]
+    [Table("Files")]
 
-    public class User:Common
+    public class Files:Common
     {
-
         [Key]
-        public  Guid UserId { get; set; }
+        public Guid ID { get; set; }
         public string Name { get; set; }
-        public string Password {  get; set; }
-        public decimal Amount {  get; set; }
-        public bool? is_admin {  get; set; }
+        public string Uri { get; set; }
+        public string ContentType {  get; set; }
     }
 }

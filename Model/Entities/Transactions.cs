@@ -9,16 +9,14 @@ using Model.ApplicationConfig;
 
 namespace Model.Entities
 {
-    [Table("User")]
+    [Table("Transactions")]
 
-    public class User:Common
+    public class Transactions :Common
     {
-
         [Key]
-        public  Guid UserId { get; set; }
-        public string Name { get; set; }
-        public string Password {  get; set; }
-        public decimal Amount {  get; set; }
-        public bool? is_admin {  get; set; }
+        public Guid ID { get; set; } = Guid.NewGuid();
+        public Guid UserId { get; set; }
+        public string TransactionType { get; set; }
+        public decimal Amount { get; set; }
     }
 }

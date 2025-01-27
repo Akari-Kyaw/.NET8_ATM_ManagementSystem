@@ -9,10 +9,9 @@ using Repository.Respositories.IRepositories;
 
 namespace Repository.Respositories.Repositories
 {
-    internal class UserRespository:GenericRepository<User>, IUserRepository
-
+    internal class TransactionRepository : GenericRepository<Transactions>, ITransactionRepository
     {
-        public UserRespository(DataContext context) : base(context) { }
+        public TransactionRepository(DataContext context) : base(context) { }
 
-}
+    }
 }

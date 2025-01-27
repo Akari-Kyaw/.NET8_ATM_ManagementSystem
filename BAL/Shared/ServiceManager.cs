@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BAL.Common;
 using BAL.IServices;
 using BAL.Services;
 using Microsoft.EntityFrameworkCore;
@@ -23,6 +24,10 @@ namespace BAL.Shared
             });
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IUserService ,UserServices>();
+            services.AddScoped<IFileService, FileService>();
+            services.AddScoped<ITransactionService, TransactionSecvice>();
+            services.AddScoped<TokenProvider, TokenProvider>();
+
         }
     }
 }

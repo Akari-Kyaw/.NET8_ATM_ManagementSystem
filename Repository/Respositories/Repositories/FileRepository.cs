@@ -9,10 +9,10 @@ using Repository.Respositories.IRepositories;
 
 namespace Repository.Respositories.Repositories
 {
-    internal class UserRespository:GenericRepository<User>, IUserRepository
+    internal class FileRepository : GenericRepository<Files>, IFileRepository
 
     {
-        public UserRespository(DataContext context) : base(context) { }
+        public FileRepository(DataContext context) : base(context) { }
 
-}
+    }
 }
